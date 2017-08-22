@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "start": "webpack-dev-server"
+  },
   "dependencies": {
     "react": "^15.6.0",
     "react-dom": "^15.6.0",
@@ -10,9 +13,14 @@
     "redux": "^3.7.2"
   },
   "devDependencies": {
-    "@types/react": "^15.6.0",
+    "@types/react": "^15.6.1",
     "@types/react-dom": "^15.5.4",
     "@types/react-redux": "^5.0.4",
-    "@types/redux": "^3.6.0"
+    "@types/redux": "^3.6.0",
+    "awesome-typescript-loader": "^3.2.3",
+    "html-webpack-plugin": "^2.30.1",
+    "typescript": "^2.4.2",
+    "webpack": "^3.5.5",
+    "webpack-dev-server": "^2.7.1"
   }
 }
