@@ -8,8 +8,12 @@ import * as actions from './actions'
 export interface Props {
     counter: number
 }
+export interface Actions {
+    increase(): void
+    decrease(): void
+}
 
-const Counter = ({ counter, increase, decrease }: Props & typeof actions) => (
+const Counter = ({ counter, increase, decrease }: Props & Actions) => (
     <div>
         <h2>{counter}</h2>
         <p>
@@ -19,7 +23,7 @@ const Counter = ({ counter, increase, decrease }: Props & typeof actions) => (
     </div>
 )
 
-export default connect(
+export default connect<Props, Actions, {}>(
     (state: RootState) => ({ counter: state.counter }),
-    { ...actions }
+    { increase: actions.increase, decrease: actions.decrease }
 )(Counter)

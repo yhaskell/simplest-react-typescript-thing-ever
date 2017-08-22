@@ -8,10 +8,14 @@ import store from './store'
 import Counter from './counter'
 
 
-const Application = (
+const Application = () => (
     <Provider store={store}>
-        <div>
-            <h1>{}
-        </div>
+        <Counter />
     </Provider>
+)
+
+
+ReactDOM.render(
+    <Application />,
+    document.getElementById('app')
 )
